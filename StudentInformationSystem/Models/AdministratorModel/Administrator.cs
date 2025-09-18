@@ -4,15 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentInformationSystem.Models.AdministratorModel
 {
-    public class Administrator
+    public class Administrator: Person
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int AdminID { get; set; }
 
-
-        public PersonalInfo PersonalInfo { get; set; }
-
-        public ContactData ContactData { get; set; }
     }
 }

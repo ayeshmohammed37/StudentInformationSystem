@@ -7,17 +7,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentInformationSystem.Models.StaffModel
 {
-    public class Staff
+    public class Staff: Person
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int StaffID { get; set; }
+        public String Degree { get; set; }
 
-        public PersonalInfo PersonalInfo { get; set; }
-
-        public ContactData ContactData{ get; set; }
-
-        public PreQualifications PreQualifications { get; set; }
+        public string Office { get; set; }
 
         //Navigation Properties
 

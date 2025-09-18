@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentInformationSystem.Models.StudentModel
 {
-    public class Student
+    public class Student: Person
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -16,10 +16,6 @@ namespace StudentInformationSystem.Models.StudentModel
 
         public int Level { get; set; }
 
-
-        public PersonalInfo PersonalInfo { get; set; }
-
-        public ContactData ContactData { get; set; }
 
         //Navigation Properties
 
