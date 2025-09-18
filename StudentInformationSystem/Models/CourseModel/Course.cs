@@ -28,14 +28,14 @@ namespace StudentInformationSystem.Models.CourseModel
         public virtual List<Staff> Staffs { get; set; } = new List<Staff>();
 
 
-        public ICollection<Course> Prerequisites { get; set; }
-        public ICollection<Course> IsPrerequisiteFor { get; set; }
+        //public ICollection<Course> Prerequisites { get; set; }
+        //public ICollection<Course> IsPrerequisiteFor { get; set; }
 
-        public Course()
-        {
-            Prerequisites = new HashSet<Course>();
-            IsPrerequisiteFor = new HashSet<Course>();
-        }
+        //public Course()
+        //{
+        //    Prerequisites = new HashSet<Course>();
+        //    IsPrerequisiteFor = new HashSet<Course>();
+        //}
 
     }
 

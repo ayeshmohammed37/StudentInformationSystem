@@ -35,11 +35,11 @@ namespace StudentInformationSystem.Data
             //modelBuilder.Entity<Staff>().ToTable("Staffs");
             //modelBuilder.Entity<Administrator>().ToTable("Administrators");
 
-            modelBuilder.Entity<Course>(course =>
-            {
-                course.HasMany(c => c.Prerequisites)
-                .WithMany(c => c.IsPrerequisiteFor);
-            });
+            //modelBuilder.Entity<Course>(course =>
+            //{
+            //    course.HasMany(c => c.Prerequisites)
+            //    .WithMany(c => c.IsPrerequisiteFor);
+            //});
 
 
 
