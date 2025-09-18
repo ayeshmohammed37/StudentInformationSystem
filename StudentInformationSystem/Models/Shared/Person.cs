@@ -1,8 +1,14 @@
-﻿namespace StudentInformationSystem.Models.Shared
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace StudentInformationSystem.Models.Shared
 {
 
     public abstract class Person
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
 
         public string FirstName { get; set; }
         public string MiddleName { get; set; }

@@ -8,7 +8,7 @@ namespace StudentInformationSystem.Models.AdministratorModel
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int AdminID { get; set; }
+        //public int AdminID { get; set; }
 
     }
 }

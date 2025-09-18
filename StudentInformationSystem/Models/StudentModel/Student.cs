@@ -10,9 +10,9 @@ namespace StudentInformationSystem.Models.StudentModel
 {
     public class Student: Person
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int StudentID { get; set; }
+        //[Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //public int StudentID { get; set; }
 
         public int Level { get; set; }
 

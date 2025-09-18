@@ -9,9 +9,9 @@ namespace StudentInformationSystem.Models.StaffModel
 {
     public class Staff: Person
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int StaffID { get; set; }
+        //[Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //public int StaffID { get; set; }
         public String Degree { get; set; }
 
         public string Office { get; set; }
