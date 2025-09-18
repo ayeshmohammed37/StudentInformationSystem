@@ -4,6 +4,7 @@ using StudentInformationSystem.Models.CourseGradeModel;
 using StudentInformationSystem.Models.CourseModel;
 using StudentInformationSystem.Models.DepartmentCourseModel;
 using StudentInformationSystem.Models.DepartmentModel;
+using StudentInformationSystem.Models.Shared;
 using StudentInformationSystem.Models.StaffModel;
 using StudentInformationSystem.Models.StudentModel;
 
@@ -29,11 +30,18 @@ namespace StudentInformationSystem.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
+            modelBuilder.Entity<Person>().UseTpcMappingStrategy();
+            //modelBuilder.Entity<Student>().ToTable("Students");
+            //modelBuilder.Entity<Staff>().ToTable("Staffs");
+            //modelBuilder.Entity<Administrator>().ToTable("Administrators");
+
             modelBuilder.Entity<Course>(course =>
             {
                 course.HasMany(c => c.Prerequisites)
                 .WithMany(c => c.IsPrerequisiteFor);
             });
+
+
 
             base.OnModelCreating(modelBuilder);
         }
