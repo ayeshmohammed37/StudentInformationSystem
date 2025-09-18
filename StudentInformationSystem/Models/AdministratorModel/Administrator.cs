@@ -1,6 +1,6 @@
 ﻿using StudentInformationSystem.Models.Shared;
 
-namespace StudentInformationSystem.Models.Administrator
+namespace StudentInformationSystem.Models.AdministratorModel
 {
     public class Administrator
     {

@@ -1,4 +1,4 @@
-﻿namespace StudentInformationSystem.Models.Course
+﻿namespace StudentInformationSystem.Models.CourseModel
 {
     public enum Requirment
     {

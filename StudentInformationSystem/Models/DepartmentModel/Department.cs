@@ -1,4 +1,4 @@
-﻿namespace StudentInformationSystem.Models.Department
+﻿namespace StudentInformationSystem.Models.DepartmentModel
 {
     public class Department
     {
@@ -9,6 +9,8 @@
 
 
         //DepartmentHeadID forign key for the instructor
+
+       
 
     }
 }

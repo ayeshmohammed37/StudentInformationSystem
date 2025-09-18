@@ -1,6 +1,6 @@
 ﻿using StudentInformationSystem.Models.Shared;
 
-namespace StudentInformationSystem.Models.Staff
+namespace StudentInformationSystem.Models.StaffModel
 {
     public class Staff
     {
