@@ -1,0 +1,135 @@
+﻿
+@model StudentDetailsVM
+
+
+<div class="container mt-5 mb-5">
+
+    <div class="text-center mb-4">
+        <h1 class="display-5">
+            @Model.Student.FirstName @Model.Student.MiddleName @Model.Student.LastName
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    Personal & Contact Information
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Personal Details</h5>
+                            <hr>
+                            <dl class="row">
+                                <dt class="col-sm-5">Student Code:</dt>
+                                <dd class="col-sm-7">@Model.Student.Code</dd>
+
+                                <dt class="col-sm-5">ID Number:</dt>
+                                <dd class="col-sm-7">@Model.Student.IDNumber</dd>
+
+                                <dt class="col-sm-5">Gender:</dt>
+                                <dd class="col-sm-7">@Model.Student.Gender</dd>
+
+                                <dt class="col-sm-5">Nationality:</dt>
+                                <dd class="col-sm-7">@Model.Student.Nationality</dd>
+
+                                <dt class="col-sm-5">Birth Date:</dt>
+                                <dd class="col-sm-7">@Model.Student.BirthDate</dd>
+
+                                <dt class="col-sm-5">Birth Place:</dt>
+                                <dd class="col-sm-7">@Model.Student.BirthPlace</dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Contact Details</h5>
+                            <hr>
+                            <dl class="row">
+                                <dt class="col-sm-4">Email:</dt>
+                                <dd class="col-sm-8">@Model.Student.Email</dd>
+
+                                <dt class="col-sm-4">Mobile:</dt>
+                                <dd class="col-sm-8">@Model.Student.Mobile</dd>
+
+                                <dt class="col-sm-4">Home Phone:</dt>
+                                <dd class="col-sm-8">@Model.Student.HomeTele</dd>
+
+                                <dt class="col-sm-4">City:</dt>
+                                <dd class="col-sm-8">@Model.Student.City</dd>
+
+                                <dt class="col-sm-4">Address:</dt>
+                                <dd class="col-sm-8">@Model.Student.Address</dd>
+
+                                <dt class="col-sm-4">MailBox:</dt>
+                                <dd class="col-sm-8">@Model.Student.MailBox</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <div class="card-header bg-dark text-white">
+                    Academic Profile
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-5">Student ID:</dt>
+                        <dd class="col-sm-7">@Model.Student.ID</dd>
+
+                        <dt class="col-sm-5">Level:</dt>
+                        <dd class="col-sm-7">@Model.Student.Level</dd>
+
+                        <hr class="mt-2 mb-2">
+
+                        <dt class="col-sm-5">Department:</dt>
+                        <dd class="col-sm-7">@Model.Department.Name</dd>
+
+                        <dt class="col-sm-5">Dept. Code:</dt>
+                        <dd class="col-sm-7">@Model.Department.DepartmentCode</dd>
+
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header bg-secondary text-white">
+            Course History & Grades
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Final Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var grade in Model.CourseGrades)
+                        {
+                            <tr>
+                                <td>@grade.Course.CourseCode</td>
+                                <td>@grade.Course.CourseName</td>
+                                <td>@grade.Course.CreditHours</td>
+                                <td>@grade.CourseStartDate.ToShortDateString()</td>
+                                <td>@grade.CourseEndDate.ToShortDateString()</td>
+                                <td><strong>@grade.Grade.ToString()</strong></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
