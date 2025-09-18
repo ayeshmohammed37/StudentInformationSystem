@@ -1,0 +1,60 @@
+﻿
+@model List<Student>
+
+
+<div class="container mt-4">
+    <h2>Student Information</h2>
+    <p>A styled table to display students Personal Information.</p>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Code</th>
+                    <th>ID Number</th>
+                    <th>Gender</th>
+                    <th>Nationality</th>
+                    <th>Birth Date</th>
+                    <th>Birth Place</th>
+                    <th>Level</th>
+                    <th>City</th>
+                    <th>Address</th>
+                    <th>Home Phone</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Fax</th>
+                    <th>MailBox</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.ID</td>
+                        <td>@student.FirstName</td>
+                        <td>@student.MiddleName</td>
+                        <td>@student.LastName</td>
+                        <td>@student.Code</td>
+                        <td>@student.IDNumber</td>
+                        <td>@student.Gender</td>
+                        <td>@student.Nationality</td>
+                        <td>@student.BirthDate</td>
+                        <td>@student.BirthPlace</td>
+                        <td>@student.Level</td>
+                        <td>@student.City</td>
+                        <td>@student.Address</td>
+                        <td>@student.HomeTele</td>
+                        <td>@student.Mobile</td>
+                        <td>@student.Email</td>
+                        <td>@student.Fax</td>
+                        <td>@student.MailBox</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
