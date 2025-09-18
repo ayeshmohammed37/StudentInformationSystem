@@ -12,8 +12,10 @@ namespace StudentInformationSystem.Models.DepartmentCourseModel
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int DepartmentCourseID { get; set; }
 
+        [Required]  
         public int DepartmentID { get; set; }
 
+        [Required]
         public int CourseID { get; set; }
 
         [ForeignKey(nameof(DepartmentID))]

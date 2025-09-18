@@ -16,17 +16,19 @@ namespace StudentInformationSystem.Models.CourseGradeModel
         public DateTime CourseStartDate { get; set; }
         public DateTime CourseEndDate { get; set; }
 
+        [Required]
         public int StudentID { get; set; }
 
+        [Required]
         public int CourseID { get; set; }
 
         //Navigation Properties
         [ForeignKey(nameof(StudentID))]
         [DeleteBehavior(DeleteBehavior.NoAction)]
-        public virtual Student? Student { get; set; } = null;
+        public virtual Student Student { get; set; }
 
         [ForeignKey(nameof(CourseID))]
         [DeleteBehavior(DeleteBehavior.NoAction)]
-        public virtual Course? Course { get; set; } = null;
+        public virtual Course Course { get; set; } 
     }
 }
